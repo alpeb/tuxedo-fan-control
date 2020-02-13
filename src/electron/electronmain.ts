@@ -388,14 +388,15 @@ function printCurrentFanInformations(): void
 
 function tuxedoCheckerAndExecuter(func: Function): void
 {
-    if((<any>global).vendorcheck && !require("./common/system").System.isTuxedoDevice())
+              func();
+    /*if((<any>global).vendorcheck && !require("./common/system").System.isTuxedoDevice())
     {
         console.log("No TUXEDO device found");
     }
     else if(!(<any>global).vendorcheck || ((<any>global).vendorcheck && require("./common/system").System.isTuxedoDevice()))
     {
         func();
-    }
+    }*/
 }
 
 class CommandlineOption
